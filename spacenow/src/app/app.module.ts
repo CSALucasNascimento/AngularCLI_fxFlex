@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponentsModule } from './material-components.module';
+import { Parallax, ParallaxConfig } from 'ngx-parallax';
 
 import { AppComponent } from './app.component';
 
@@ -15,7 +16,8 @@ import { AppComponent } from './app.component';
     MaterialComponentsModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    Parallax
   ],
   providers: [],
   bootstrap: [AppComponent]

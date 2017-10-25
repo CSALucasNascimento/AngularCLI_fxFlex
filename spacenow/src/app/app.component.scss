@@ -1,32 +1,49 @@
 .section-main {
-  border: solid 1px #b6b6b6;
   background: transparent;
-  min-height: calc(100% - 100px) !important;
-  height: calc(100% - 100px) !important;
-  max-height: calc(100% - 100px) !important;
+  min-height: calc(100% - 1px) !important;
+  height: calc(100% - 1px) !important;
+  max-height: calc(100% - 1px) !important;
 
   .overlay {
     position: absolute;
-    min-height: calc(100% - 100px) !important;
-    height: calc(100% - 100px) !important;
-    max-height: calc(100% - 100px) !important;
+    min-height: calc(100% - 1px) !important;
+    height: calc(100% - 1px) !important;
+    max-height: calc(100% - 1px) !important;
     width: 100%;
+    z-index: 2;
 
+    &.top {
+      /* Overlay from top */
+      background: -webkit-linear-gradient(rgba(10, 80, 38, 1), rgba(72, 255, 0, 0)); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(rgba(10, 80, 38, 1), rgba(72, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(rgba(10, 80, 38, 1), rgba(72, 255, 0, 0)); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(rgba(10, 80, 38, 1), rgba(72, 255, 0, 0)); /* Standard syntax */
+    }
 
-    background: -webkit-linear-gradient(rgba(10, 80, 38, 1), rgba(72, 255, 0, 0)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(10, 80, 38, 1), rgba(72, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(10, 80, 38, 1), rgba(72, 255, 0, 0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(10, 80, 38, 1), rgba(72, 255, 0, 0)); /* Standard syntax */
+    &.bottom {
+      /* Overlay from bottom */
+      background: -webkit-linear-gradient(rgba(72, 255, 0, 0), rgba(10, 80, 38, 1)); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(rgba(72, 255, 0, 0), rgba(10, 80, 38, 1)); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(rgba(72, 255, 0, 0), rgba(10, 80, 38, 1)); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(rgba(72, 255, 0, 0), rgba(10, 80, 38, 1)); /* Standard syntax */
+    }
+
+    &.full {
+      /* Full Overlay */
+      background: rgba(10, 80, 38, .5); /* For Safari 5.1 to 6.0 */
+    }
+
   }
 
   .logo {
-    width: 250px;
+    width: 300px;
   }
 
   .menu {
     .mat-button.item {
       color: #009688;
-      font-size: 20px !important;
+      font-size: 25px !important;
+      font-weight: 400;
       text-transform: uppercase !important;
     }
   }
@@ -49,61 +66,12 @@
     text-align: center;
   }
   
-  div.coloredContainerX > div:nth-child(1), div.colorNested > div > div:nth-child(1) {
-    background-color: #009688;
-  }
-  
-  div.coloredContainerX > div:nth-child(2), div.colorNested > div > div:nth-child(2) {
-    background-color: #3949ab;
-  }
-  
-  div.coloredContainerX > div:nth-child(3), div.coloredChildren > div:nth-child(3), div.colorNested > div > div:nth-child(3) {
-    background-color: #9c27b0;
-  }
-  
-  div.coloredContainerX > div:nth-child(4), div.coloredChildren > div:nth-child(4), div.colorNested > div > div:nth-child(4) {
-    background-color: #b08752;
-  }
-  
-  div.coloredContainerX > div:nth-child(5), div.coloredChildren > div:nth-child(5), div.colorNested > div > div:nth-child(5) {
-    background-color: #5ca6b0;
-  }
-  
   div.colored > div {
     padding: 8px;
     box-shadow: 0px 2px 5px 0 rgba(52, 47, 51, 0.63);
     opacity: 0.9;
     color: #fff;
     text-align: center;
-  }
-  
-  div.colored > div:nth-child(1), .one {
-    background-color: #009688;
-  }
-  
-  div.colored > div:nth-child(2), .two {
-    background-color: #3949ab;
-  }
-  
-  div.colored > div:nth-child(3), .three {
-    background-color: #9c27b0;
-  }
-  
-  
-  div.colored > div:nth-child(4), .four {
-    background-color: #8bc34a;
-  }
-  
-  div.colored > div:nth-child(5), .five {
-    background-color: #03A9F4;
-  }
-  
-  div.colored > div:nth-child(6), .six {
-    background-color: #c9954e;
-  }
-  
-  div.colored > div:nth-child(7), .seven {
-    background-color: #FF5722;
   }
   
   .hint {
@@ -117,12 +85,7 @@
     margin:5px;
     font-size:0.9em;
     color: #5c5c5c;
-  }
-  
-  .box {
-    border: solid 1px gray;
-  }
-  
+  }  
   
   button.md-primary {
     margin-left:25px;
